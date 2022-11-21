@@ -30,7 +30,7 @@ function BootModule:load()
     Lurker.interval = 0.5
   end
 
-  -- Load global locales files
+  -- Load global objects files
   local objects_files = {}
   RecursiveEnumerate('objects', objects_files)
   RequireFiles(objects_files)
