@@ -1,7 +1,7 @@
 function love.conf(t)
   t.releases = {
-    title = 'YOUR GAME',                -- The project title (string)
-    package = 'YOUR GAME',              -- The project command and package name (string)
+    title = 'LÖVE (v11.4)',             -- The project title (string)
+    package = 'LÖVE (v11.4)',           -- The project command and package name (string)
     loveVersion = '11.4',               -- The project LÖVE version
     version = '0.0',                    -- The project version
     author = 'YOUR NAME',               -- Your name (string)
@@ -24,7 +24,7 @@ function love.conf(t)
   t.audio.mic = false                   -- Request and use microphone capabilities in Android (boolean)
   t.audio.mixwithsystem = true          -- Keep background music playing when opening LOVE (boolean, iOS and Android only)
 
-  t.window.title = "YOUR GAME"          -- The window title (string)
+  t.window.title = "LÖVE (v11.4)"       -- The window title (string)
   t.window.icon = nil                   -- Filepath to an image to use as the window's icon (string)
   t.window.width = 640                  -- The window width (number)
   t.window.height = 480                 -- The window height (number)
