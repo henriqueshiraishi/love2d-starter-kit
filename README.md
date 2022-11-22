@@ -1,6 +1,6 @@
 # LÖVE: Starter Kit
 
-Purpose of this repository is to deliver a structure of folders and files to start with LÖVE. It also comes with some libraries included.
+Purpose of this repository is to deliver a structure of folders and files to start with LÖVE.
 
 ### Project directory structure
 
