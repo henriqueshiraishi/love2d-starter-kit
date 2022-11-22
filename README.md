@@ -22,7 +22,7 @@ Purpose of this repository is to deliver a structure of folders and files to sta
 
 `\locales\en.lua` a simple example file
 
-`\objects` folder used to store GameObjects like enemies, levels, items, etc ***(all files inside this folder are loded automatic)***
+`\objects` folder used to store GameObjects like enemies, level, etc ***(all files inside this folder are loded automatic)***
 
 `\objects\love_heart.lua` a simple example file
 
@@ -77,6 +77,6 @@ Purpose of this repository is to deliver a structure of folders and files to sta
 
 `Debug` LoveBird - https://github.com/rxi/lovebird
 
-`Developement` Lurker - https://github.com/rxi/lurker
+`Development` Lurker - https://github.com/rxi/lurker
 
 `i18n` I18n - https://github.com/kikito/i18n.lua 
