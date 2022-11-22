@@ -1,4 +1,4 @@
---[[    Globals variables   ]]--
+--[[    Global variables   ]]--
 
 LOVE_ENV = 'development'
 
@@ -10,7 +10,7 @@ DEBUG_SHOW_MEM = true
 DEBUG_SHOW_WEB = false
 DEBUG_SHOW_WEB_PORT = 8000
 
---[[    Globals functions   ]]--
+--[[    Global functions   ]]--
 
 function RecursiveEnumerate(folder, file_list)
   local items = love.filesystem.getDirectoryItems(folder)

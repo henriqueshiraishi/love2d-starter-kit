@@ -1,5 +1,5 @@
 require("libraries")      -- Load libraries (load vendors)
-require("globals")        -- Load globals variables and functions
+require("global")         -- Load global variables and functions
 require("input_bindings") -- Load input bindings
 require("boot")           -- Load boot file (load helpers and locales)
 
