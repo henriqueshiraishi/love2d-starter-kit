@@ -84,3 +84,25 @@ Purpose of this repository is to deliver a structure of folders and files to sta
 `Development` Lurker - https://github.com/rxi/lurker
 
 `i18n` I18n - https://github.com/kikito/i18n.lua 
+
+### Recommended libraries
+
+`Animation` - Anim8 - https://github.com/kikito/anim8
+
+`Camera` Hump.camera - https://github.com/vrld/hump
+
+`Debug` Editgrid - https://github.com/bakpakin/Editgrid
+
+`Draw` Draft - https://github.com/pelevesque/draft
+
+`Draw` Deep - https://github.com/Nikaoto/deep
+
+`Light` Lighter - https://github.com/speakk/lighter
+
+`Physics` Breezefield - https://github.com/HDictus/breezefield
+
+`Collision` Bump - https://github.com/kikito/bump.lua
+
+`GUI` SUIT - https://github.com/vrld/suit
+
+`Assets` Love-loader - https://github.com/kikito/love-loader

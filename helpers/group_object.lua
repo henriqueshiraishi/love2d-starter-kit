@@ -1,6 +1,7 @@
 GroupObject = Class:extend()
 
-function GroupObject:new()
+function GroupObject:new(scene)
+  self.scene = scene
   self.objects = {}
   self.objects.by_id = {}
   self.objects.by_class = {}
