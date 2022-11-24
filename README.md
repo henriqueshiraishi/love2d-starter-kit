@@ -10,7 +10,9 @@ Purpose of this repository is to deliver a structure of folders and files to sta
 
 `\helpers\class.lua` a simple file that extend from Classic to represent a Class
 
-`\helpers\game_object.lua` a simple file that extend from Classic to represent a GameObject
+`\helpers\game_object.lua` a simple file that extend from Class to represent a GameObject (use on objects folder)
+
+`\helpers\scene.lua` a simple file that extend from Class to represent a Scene (use on loaders folder)
 
 `\helpers\color.lua` a simple file that include some methods to love.color to treat color
 
@@ -52,10 +54,10 @@ Purpose of this repository is to deliver a structure of folders and files to sta
 4. global.lua
 5. input_bindings.lua
 6. boot.lua (loading helpers and locales)
-7. Boot load debug, auto-refresh and objects
-8. Set i18n
-9. Set loaders
-10. Execute game (welcome.lua loader using love_heart.lua game object)
+7. main.lua: boot load debug, auto-refresh and objects
+8. main.lua: set i18n
+9. main.lua: set loaders
+10. main.lua: execute game (welcome.lua loader using love_heart.lua game object)
 
 ### Included libraries
 

@@ -24,3 +24,6 @@ luac.out
 *.lo
 *.def
 *.exp
+
+# Editors
+.vscode

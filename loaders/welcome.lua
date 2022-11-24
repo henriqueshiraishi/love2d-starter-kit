@@ -1,4 +1,4 @@
-local Welcome = Class:extend()
+local Welcome = Scene:extend()
 
 function Welcome:new()
   self.LoveHeart = LoveHeart()

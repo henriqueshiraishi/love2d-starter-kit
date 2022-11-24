@@ -1,4 +1,4 @@
-GameObject = Classic:extend()
+GameObject = Class:extend()
 
 function GameObject:new()
   
