@@ -12,7 +12,7 @@ Purpose of this repository is to deliver a structure of folders and files to sta
 
 `\helpers\game_object.lua` a simple file that extend from Class to represent a GameObject (use on objects folder)
 
-`\helpers\group_object.lua` a simple file that extend from Class to represent a GroupObject (space concept / object management)
+`\helpers\group_object.lua` a simple file that extend from Class to represent a GroupObject (object management)
 
 `\helpers\scene.lua` a simple file that extend from Class to represent a Scene (use on loaders folder)
 
