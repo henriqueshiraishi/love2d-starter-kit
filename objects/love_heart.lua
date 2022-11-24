@@ -1,6 +1,8 @@
 LoveHeart = GameObject:extend()
 
 function LoveHeart:new()
+  self.super:new()
+  self.class = "my-class"
   self.image = love.graphics.newImage("resources/love2d.png")
   self.r = 0
   self.ox = self.image:getWidth() / 2

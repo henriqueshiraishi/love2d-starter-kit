@@ -1,15 +1,16 @@
 local Welcome = Scene:extend()
 
 function Welcome:new()
-  self.LoveHeart = LoveHeart()
+  self.mySpace = GroupObject()
+  self.mySpace:add(LoveHeart())
 end
 
 function Welcome:update(dt)
-  self.LoveHeart:update(dt)
+  self.mySpace:update(dt)
 end
 
 function Welcome:draw()
-  self.LoveHeart:draw()
+  self.mySpace:draw()
 end
 
 return Welcome
