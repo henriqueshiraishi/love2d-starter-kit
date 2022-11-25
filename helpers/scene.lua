@@ -11,3 +11,7 @@ end
 function Scene:draw()
   
 end
+
+function Scene:destroy()
+  
+end

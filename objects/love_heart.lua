@@ -1,7 +1,7 @@
 LoveHeart = GameObject:extend()
 
 function LoveHeart:new()
-  self.super:new()
+  self.super.new(self)
   self.class = "my-class"
   self.image = love.graphics.newImage("resources/love2d.png")
   self.r = 0
@@ -27,4 +27,15 @@ end
 
 function LoveHeart:draw()
   love.graphics.draw(self.image, love.graphics.getWidth() / 2, love.graphics.getHeight() / 2, self.r, self.sx, self.sy, self.ox, self.oy)
+end
+
+function LoveHeart:destroy()
+  self.super.destroy(self)
+  self.image = nil
+  self.r = nil
+  self.ox = nil
+  self.oy = nil
+  self.sx = nil
+  self.sy = nil
+  self.timer = nil
 end

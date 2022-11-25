@@ -19,6 +19,7 @@ function GroupObject:update(dt)
           break
         end
       end
+      self.objects[i]:destroy()
       table.remove(self.objects, i)
     end
   end
@@ -26,6 +27,16 @@ end
 
 function GroupObject:draw()
   for _, object in ipairs(self.objects) do object:draw() end
+end
+
+function GroupObject:destroy()
+  for i = #self.objects, 1, -1 do
+    self.objects[i]:destroy()
+    table.remove(self.objects, i)
+  end
+
+  self.scene = nil
+  self.objects = nil
 end
 
 function GroupObject:add(object)

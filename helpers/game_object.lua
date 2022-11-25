@@ -13,3 +13,10 @@ end
 function GameObject:draw()
   
 end
+
+function GameObject:destroy()
+  self.id = nil
+  self.class = nil
+  self.dead = nil
+  if self.group then self.group = nil end
+end

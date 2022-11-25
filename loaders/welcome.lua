@@ -13,4 +13,10 @@ function Welcome:draw()
   self.mySpace:draw()
 end
 
+function Welcome:destroy()
+  self.super.destroy(self)
+  self.mySpace:destroy()
+  self.mySpace = nil
+end
+
 return Welcome

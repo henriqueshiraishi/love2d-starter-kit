@@ -69,16 +69,22 @@ function Loader:purge(scene)
   assert(type(scene) == "string", "Function 'purge': parameter must be a string.")
 
   local path = self.dir .. scene
+  local boot = self.boots[scene]
 
   self:remove(scene)
   self.boots[scene] = nil
+  if boot and boot['destroy'] then boot:destroy() end
   package.loaded[path] = nil
 end
 
 function Loader:purgeAll()
   local scenes = self.scenes
+  local boots = self.boots
   self:removeAll()
   self.boots = {}
+  for _, boot in ipairs(boots) do
+    if boot and boot['destroy'] then boot:destroy() end
+  end
   for _, scene in ipairs(scenes) do
     local path = self.dir .. scene
     package.loaded[path] = nil
