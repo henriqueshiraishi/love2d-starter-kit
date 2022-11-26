@@ -32,6 +32,6 @@ Fonts  = {}
 Assets.newImage(Images, "love2d", "resources/love2d.png")
 
 ----- Just forcing to show progress bar working
-for i = 1, 25, 1 do
+for i = 1, 100, 1 do
   Assets.newImage(Images, "love2d" .. i, "resources/love2d.png")
 end

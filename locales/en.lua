@@ -1,5 +1,6 @@
 I18n.load({
   en = {
-    greetings = "Hi, welcome to LÖVE!"
+    greetings = "Hi, welcome to LÖVE!",
+    loading = "Loading"
   }
 })

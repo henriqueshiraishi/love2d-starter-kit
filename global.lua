@@ -1,5 +1,7 @@
 --[[    Global variables   ]]--
 
+CHUNK_SIZE = 128
+
 LOVE_ENV = 'development'
 
 DEBUG_MODE_ON = false
