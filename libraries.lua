@@ -9,3 +9,4 @@ DebugGraph = require("vendors.debug-graph.debugGraph") -- https://github.com/Mec
 LoveBird   = require("vendors.lovebird.lovebird") -- https://github.com/rxi/lovebird
 Lurker     = require("vendors.lurker.lurker") -- https://github.com/rxi/lurker
 I18n       = require("vendors.i18n.i18n") -- https://github.com/kikito/i18n.lua
+Assets     = require("vendors.love-assets-loader.love-assets-loader") -- https://github.com/kikito/love-loader

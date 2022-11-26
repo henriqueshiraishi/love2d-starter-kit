@@ -1,18 +1,26 @@
 require("libraries")      -- Load libraries (load vendors)
 require("global")         -- Load global variables and functions
+require("boot")           -- Load boot file (set assets loader and load helpers and locales)
+require("assets_loader")  -- Load assets settings
 require("input_bindings") -- Load input bindings
-require("boot")           -- Load boot file (load helpers and locales)
+
+-- After assets loaded callback (useful to start the first scene game after load)
+Assets.afterAssetsLoaded = function()
+  -- Purge and adding scene
+  Loader:purge("preload")
+  Loader:add("welcome")
+end
 
 function love.load()
-  -- Set boot (load debug, auto-refresh and objects)
+  -- Set boot (load debug, auto-refresh, assets and objects)
   Boot:load()
 
   -- Set i18n
   I18n.setLocale("en")
 
-  -- Set loader and adding scene
+  -- Set loader and adding load scene
   Loader:setPath("loaders")
-  Loader:add("welcome")
+  Loader:add("preload")
 end
 
 function love.update(dt)

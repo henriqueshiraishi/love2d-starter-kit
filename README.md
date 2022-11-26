@@ -4,7 +4,7 @@ Purpose of this repository is to deliver a structure of folders and files to sta
 
 ### Project directory structure
 
-`\_love` include a portable LÖVE 64-bit
+`\_LÖVE` include a portable LÖVE 64-bit
 
 `\helpers` includes files that can be useful for the whole project ***(all files inside this folder are loded automatic)***
 
@@ -16,9 +16,9 @@ Purpose of this repository is to deliver a structure of folders and files to sta
 
 `\helpers\scene.lua` a simple file that extend from Class to represent a Scene (use on loaders folder)
 
-`\helpers\color.lua` a simple file that include some methods to love.color to treat color
-
 `\loaders` folder used by [love2d-loader](https://github.com/henriqueshiraishi/love2d-loader) library to manager scenes
+
+`\loaders\preload.lua` a simple example file
 
 `\loaders\welcome.lua` a simple example file
 
@@ -30,13 +30,17 @@ Purpose of this repository is to deliver a structure of folders and files to sta
 
 `\objects\love_heart.lua` a simple example file
 
+`\objects\progress.lua` a simple example file
+
 `\resources` folder used to store assets like image, font, shader, videos, etc
 
 `\resources\love2d.png` a simple example file
 
 `\vendors` folder used to store all project libraries
 
-`boot.lua` file that load helpers, locales, debug, auto-refresh and objects ***(it's not necessary to use)***
+`assets_loader.lua` file used to configurate assets loader
+
+`boot.lua` file that load helpers, locales, debug, auto-refresh, assets and objects ***(it's not necessary to change)***
 
 `conf.lua` love configuration - [Wiki](https://love2d.org/wiki/Config_Files)
 
@@ -54,12 +58,14 @@ Purpose of this repository is to deliver a structure of folders and files to sta
 2. main.lua
 3. libraries.lua (loading vendors)
 4. global.lua
-5. input_bindings.lua
-6. boot.lua (loading helpers and locales)
-7. main.lua: boot load debug, auto-refresh and objects
-8. main.lua: set i18n
-9. main.lua: set loaders
-10. main.lua: execute game (welcome.lua loader using love_heart.lua game object)
+5. boot.lua (loading helpers and locales)
+6. assets_loader.lua
+7. input_bindings.lua
+8. main.lua: boot load debug, auto-refresh, assets and objects
+9. main.lua: set i18n
+10. main.lua: set loaders
+11. main.lua: start preload
+12. main.lua: Execute afterAssetsLoaded callback (purging preload and adding welcome scene)
 
 ### Included libraries
 
@@ -85,6 +91,8 @@ Purpose of this repository is to deliver a structure of folders and files to sta
 
 `i18n` I18n - https://github.com/kikito/i18n.lua 
 
+`Assets` Love-assets-loader - https://github.com/kikito/love-loader
+
 ### Recommended libraries
 
 `Animation` - Anim8 - https://github.com/kikito/anim8
@@ -104,5 +112,3 @@ Purpose of this repository is to deliver a structure of folders and files to sta
 `Collision` Bump - https://github.com/kikito/bump.lua
 
 `GUI` SUIT - https://github.com/vrld/suit
-
-`Assets` Love-loader - https://github.com/kikito/love-loader

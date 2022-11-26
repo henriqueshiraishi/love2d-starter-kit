@@ -1,6 +1,9 @@
 local BootModule = Classic:extend()
 
 function BootModule:new()
+  -- Declare assets loader callback
+  Assets.afterAssetsLoaded = function() end
+
   -- Load global helpers files
   local helpers_files = {}
   RecursiveEnumerate('helpers', helpers_files)
@@ -30,10 +33,19 @@ function BootModule:load()
     Lurker.interval = 0.5
   end
 
-  -- Load global objects files
-  local objects_files = {}
-  RecursiveEnumerate('objects', objects_files)
-  RequireFiles(objects_files)
+  -- Defining callback assets loader
+  local finishCallback = function()
+    -- Load global objects files
+    local objects_files = {}
+    RecursiveEnumerate('objects', objects_files)
+    RequireFiles(objects_files)
+
+    -- Execute callback
+    Assets.afterAssetsLoaded()
+  end
+
+  -- Load assets
+  Assets.start(finishCallback, print)
 end
 
 function BootModule:update(dt)
@@ -46,6 +58,10 @@ function BootModule:update(dt)
 
   if LOVE_ENV == 'development' then
     Lurker.update()
+  end
+
+  if not Assets.loaded then
+    Assets.update()
   end
 end
 
