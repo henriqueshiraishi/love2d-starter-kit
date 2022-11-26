@@ -57,6 +57,7 @@ function GroupObject:add(object)
   if not self.objects.by_class[object.class] then self.objects.by_class[object.class] = {} end
   table.insert(self.objects, object)
   table.insert(self.objects.by_class[object.class], object)
+  self:orderObjects()
 end
 
 function GroupObject:findById(id)
@@ -87,4 +88,14 @@ function GroupObject:findInRectangle(x, y, w, h)
     end
   end
   return output
+end
+
+function GroupObject:orderObjects()
+  table.sort(self.objects, function(a, b)
+    if a.depth == b.depth then
+      return a.created_at < b.created_at
+    else
+      return a.depth < b.depth
+    end
+  end)
 end

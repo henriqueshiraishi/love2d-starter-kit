@@ -12,7 +12,9 @@ local Loader = {
   scenes    = {},
   boots     = {},
   current   = nil,
-  previous  = nil
+  previous  = nil,
+  depth     = 100,
+  last_id   = 0
 }
 
 --                      --
@@ -42,10 +44,14 @@ function Loader:add(scene)
     self.previous = self.current
     self.current  = scene
     if not self.boots[scene] then
+      self.last_id = self.last_id + 1
       local path = self.dir .. scene
       self.boots[scene] = require(path)()
       self.boots[scene].frozen = false
+      self.boots[scene].id = self.last_id
+      if not self.boots[scene].depth then self.boots[scene].depth = self.depth end
     end
+    self:orderScenes()
   end
 end
 
@@ -175,6 +181,16 @@ function Loader:funcDefined(func, scene)
     return true
   end
   return false
+end
+
+function Loader:orderScenes()
+  table.sort(self.scenes, function(a, b)
+    if self.boots[a].depth == self.boots[b].depth then
+      return self.boots[a].id < self.boots[b].id
+    else
+      return self.boots[a].depth < self.boots[b].depth
+    end
+  end)
 end
 
 return Loader
