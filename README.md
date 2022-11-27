@@ -60,9 +60,10 @@ Purpose of this repository is to deliver a structure of folders and files to sta
 6. assets_loader.lua
 7. main.lua: boot load debug, auto-refresh, assets and objects
 8. main.lua: set i18n
-9. main.lua: set loaders
-10. main.lua: start preload
-11. main.lua: Execute afterAssetsLoaded callback (purging preload and adding welcome scene)
+9. main.lua: set input callbacks
+10. main.lua: set loaders
+11. main.lua: start preload
+12. main.lua: Execute afterAssetsLoaded callback (purging preload and adding welcome scene)
 
 ### Included libraries
 
