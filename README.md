@@ -46,8 +46,6 @@ Purpose of this repository is to deliver a structure of folders and files to sta
 
 `global.lua` file used to declare all global variables and functions
 
-`input_bindings.lua` file used to declare all input bindings
-
 `libraries.lua` file used to require all libraries from vendors folder
 
 `main.lua` root file - [Wiki](https://love2d.org/wiki/Getting_Started)
@@ -60,12 +58,11 @@ Purpose of this repository is to deliver a structure of folders and files to sta
 4. global.lua
 5. boot.lua (loading helpers and locales)
 6. assets_loader.lua
-7. input_bindings.lua
-8. main.lua: boot load debug, auto-refresh, assets and objects
-9. main.lua: set i18n
-10. main.lua: set loaders
-11. main.lua: start preload
-12. main.lua: Execute afterAssetsLoaded callback (purging preload and adding welcome scene)
+7. main.lua: boot load debug, auto-refresh, assets and objects
+8. main.lua: set i18n
+9. main.lua: set loaders
+10. main.lua: start preload
+11. main.lua: Execute afterAssetsLoaded callback (purging preload and adding welcome scene)
 
 ### Included libraries
 
@@ -81,7 +78,7 @@ Purpose of this repository is to deliver a structure of folders and files to sta
 
 `Signal` Hump.signal - https://github.com/vrld/hump
 
-`Input` Boipushy - https://github.com/a327ex/boipushy
+`Input` Input - https://github.com/xiejiangzhi/input
 
 `Degub` DebugGraph - https://github.com/Mechazawa/Love-Debug-Graph
 
@@ -102,8 +99,6 @@ Purpose of this repository is to deliver a structure of folders and files to sta
 `Debug` Editgrid - https://github.com/bakpakin/Editgrid
 
 `Draw` Draft - https://github.com/pelevesque/draft
-
-`Draw` Deep - https://github.com/Nikaoto/deep
 
 `Light` Lighter - https://github.com/speakk/lighter
 
