@@ -5,7 +5,7 @@ require("objects.progress")
 
 function Preload:new()
   self.progress = GroupObject(self)
-  self.progress:add(Progress())
+  self.progress:add(Progress, { h = 5 })
 end
 
 function Preload:update(dt)

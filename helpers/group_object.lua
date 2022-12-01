@@ -51,8 +51,11 @@ function GroupObject:destroy()
   self.chunk_size = nil
 end
 
-function GroupObject:add(object)
-  object.group = self
+function GroupObject:add(entity, args)
+  args = args or {}
+  args.group = self
+
+  local object = entity(args)
   self.objects.by_id[object.id] = object
   if not self.objects.by_class[object.class] then self.objects.by_class[object.class] = {} end
   table.insert(self.objects, object)

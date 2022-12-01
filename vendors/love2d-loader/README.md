@@ -12,7 +12,7 @@ Loader = require "love2d-loader"
 
 Loaders are just .lua files, so we need a folder to be stored in. In the example below a folder called `loaders/` has been created. 
 
-We tell Loader to set the path to our `loaders/` folder.
+We set the path to our `loaders/` folder.
 
 ```lua
 Loader:setPath("loaders/")
@@ -20,7 +20,7 @@ Loader:setPath("loaders/")
 
 ## Making a loader file
 
-A loader file must extend from the Classic library and can have :new(), :update() and :draw() methods declared.
+A loader file must extend from the Classic and can have :new(), :update(), :draw() and :destroy() methods declared.
 
 Below is an example trailer.lua file.
 
@@ -28,12 +28,16 @@ Below is an example trailer.lua file.
 local Trailer = Classic:extend()
 
 function Trailer:new()
+  self.depth = 200 -- opcional (default 100)
 end
 
 function Trailer:update(dt)
 end
 
 function Trailer:draw()
+end
+
+function Trailer:destroy() -- opcional (run if exists)
 end
 
 return Trailer
@@ -70,7 +74,7 @@ Loader removal is simply taking a loader out of Loader table, so it will no long
 Loader:remove("trailer")
 ```
 
-Loader purging also does this, but takes it a step further buy garbage collecting the loader state.
+Loader purging also does this, but takes it a step further buy garbage collecting the loader state and execute the ``:destroy`` method if exists.
 
 ```lua
 Loader:purge("trailer")
@@ -92,7 +96,7 @@ Loader:reload()
 -- :isFrozen(loader) check if a loader are freeze
 Loader:isFrozen("menu")
 
--- :setFrozen(laoder, toggle) toggle loader's freeze
+-- :setFrozen(loader, toggle) toggle loader's freeze
 -- when a loader is frozen, :update() is not executed for that loader
 Loader:setFrozen("menu", true)
 ```

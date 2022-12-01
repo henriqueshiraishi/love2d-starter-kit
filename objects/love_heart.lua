@@ -1,7 +1,9 @@
 LoveHeart = GameObject:extend()
 
-function LoveHeart:new()
-  self.super.new(self)
+function LoveHeart:new(args)
+  args = args or {}
+  self.super.new(self, args)
+
   self.class = "my-class"
   self.image = Images.love2d
   self.r = 0

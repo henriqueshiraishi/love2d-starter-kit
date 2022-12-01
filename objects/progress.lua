@@ -1,12 +1,13 @@
 Progress = GameObject:extend()
 
-function Progress:new()
-  self.super.new(self)
+function Progress:new(args)
+  args = args or {}
+  self.super.new(self, args)
+
   self.class = "preload"
   self.n_progress = 0
   self.w_progress = 0
   self.w = 0
-  self.h = 25
   self.x = 0
   self.y = 0
 end

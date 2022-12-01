@@ -2,7 +2,7 @@ local Welcome = Scene:extend()
 
 function Welcome:new()
   self.mySpace = GroupObject(self)
-  self.mySpace:add(LoveHeart())
+  self.mySpace:add(LoveHeart)
 end
 
 function Welcome:update(dt)
